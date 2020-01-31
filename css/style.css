@@ -15,8 +15,8 @@ body{
   margin: 1.2em;
   background-size: cover ;
   background-position: center;
-  background-image:url("pigeon-background.JPEG");
   background-color:#DDDDDD;
+  background-image:url("../images/pigeon-background.JPEG");
 }
 
 main{
@@ -32,6 +32,7 @@ h1{
 
 caption{
   margin:5px 0px;
+  
 }
 
 p{
@@ -40,50 +41,79 @@ p{
   padding-top: 10px;
 }
 
-a:link {color: #C12258;
+a:link {color: #B21F50;
     text-decoration: underline;
         text-decoration-style: wavy;
 }
 
+
 table{
     margin: auto;
-    border:2px;
-    border-color:#000000; 
+    border: 2px solid #000000; 
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-radius: 15px;
+
+
 }
 
 .colhead{
   background-color: #7e0820;
-  color: white;
-}
-
-.rowhead{}
-
-td{
-  padding: 15px;
-  border-top: 2px solid black
-}
-
-th {
   padding:10px;
   min-width: 100px;
   color: white;
   text-align: center;
   text-transform: uppercase;
-  background: #7e0820;
+
+
+ 
 }
+
+.rowhead{
+    border-top: 2px solid #000000;
+}
+
+td{
+  padding: 15px;
+  border-top: 2px solid #000000;
+}
+
 
 tr{
-  border: 2px;
-  border-color: #000000;
+  
+
 }
 
-*{}
+thead th:first-child {
+    border-top-left-radius: 15px ;
+}
+thead th:last-child {
+    border-top-right-radius: 15px;
+}
 
-tr:nth-child (odd){background: #D1D1D1;}
+}
+tbody tr:last-child td:first-child {
+    border--bottom-left-radius: 15px;
+}
+tbody tr:last-child td:last-child {
+    border-bottom-right-radius: 15px;
+}
+
+
+
+*:focus{border: 2px solid #000000;}
+
+tr:nth-child(odd) {background: #D1D1D1;}
 tr:hover{ background:rgba(126,8,32, 0.5);
 }
 
-thead tr:first-child th:first-child{}
+thead tr:first-child th:first-child{
+  border-left: none;
+}
+
+footer p{
+  color: #ffffff;
+}
 
 footer{
   position:fixed;
@@ -95,3 +125,4 @@ footer{
   text-align:center;
   color: white;
 }
+
